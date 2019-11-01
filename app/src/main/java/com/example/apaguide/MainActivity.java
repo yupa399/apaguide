@@ -27,13 +27,6 @@ import java.io.IOException;
 import io.realm.Realm;
 
 public class MainActivity extends AppCompatActivity {
-
-
-    private static final String[] Eample_Data = new String[]{
-            "{ id: 1, categoryId: 1, subCategoryId: 1, sequenceNo: 1, description1: \"Description11\", example: \"Smith, A., Brown, B., &amp; Chan, C. (2014). <i>New formations in international business.</i> Chicago, IL: Hoffman\", authorNumber: 1,  hasDate: 0 }",
-            "{ id: 2, categoryId: 1, subCategoryId: 2, sequenceNo: 1, description1: \"Description12\", example: \"Example12\", authorNumber: 1,  hasDate: 0 }",
-    };
-
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
@@ -54,24 +47,6 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-
-
-        //loadContents(); // create sample contents data
-    }
-
-    // create sample contents data
-    private void loadContents() {
-        Realm.deleteRealm(Realm.getDefaultConfiguration());
-        Realm realm = Realm.getDefaultInstance();   // Get a Realm instance for this thread
-        // create sample data
-        for(final String json : Eample_Data){
-            realm.executeTransaction(new Realm.Transaction() {
-                @Override
-                public void execute(Realm realm) {
-                    realm.createObjectFromJson(Example.class, json);
-                }
-            });
-        }
     }
 
     @Override
