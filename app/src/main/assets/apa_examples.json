@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "categoryId": 1,
+    "subCategoryId": 1,
+    "sequenceNo": 1,
+    "description1": "Example reference list entry:",
+    "description2": "",
+    "example": "Smith, A., Brown, B., &amp; Chan, C. (2014). <i>New formations in international business.</i> Chicago, IL: Hoffman",
+    "authorNumber": 1,
+    "hasDate": 1
+  },
+  {
+    "id": 2,
+    "categoryId": 1,
+    "subCategoryId": 1,
+    "sequenceNo": 2,
+    "description1": "If using a book online that does not have a DOI use \“Retrieved from http:\/\/ ... ,\” using the URL for the book.",
+    "description2": "",
+    "example": "Smith, A., Brown, B., &amp; Chan, C. (2014). <i>New formations in international business.</i> Retrieved from http:\/\/www.example.com\/",
+    "authorNumber": 2,
+    "hasDate": 1
+  },
+  {
+    "id": 3,
+    "categoryId": 1,
+    "subCategoryId": 1,
+    "sequenceNo": 3,
+    "description1": "If a publication includes digital object identifier (DOI), use the DOI instead of a URL.",
+    "description2": "",
+    "example": "Smith, A., Brown, B., &amp; Chan, C. (2014). <i>New formations in international business.</i> https:\/\/doi.org\/10.1000\/182",
+    "authorNumber": 2,
+    "hasDate": 1
+  },
+  {
+    "id": 4,
+    "categoryId": 1,
+    "subCategoryId": 2,
+    "sequenceNo": 1,
+    "description1": "The authors\' names can appear outside the brackets, incorporated into the sentence. Place the date within brackets.",
+    "description2": "",
+    "example": "Smith, Brown, and Chan (2014) found that ...",
+    "authorNumber": 1,
+    "hasDate": 1
+  },
+  {
+    "id": 5,
+    "categoryId": 1,
+    "subCategoryId": 2,
+    "sequenceNo": 2,
+    "description1": "Or place the author(s) and date(s) within brackets at an appropriate place within or at the end of a sentence.",
+    "description2": "",
+    "example": "Researchers have studied how children represent mathematical problems (Alibali, Phillips, &amp; Fischer, 2009; Siegler, 1976).",
+    "authorNumber": 2,
+    "hasDate": 1
+  },
+  {
+    "id": 6,
+    "categoryId": 1,
+    "subCategoryId": 3,
+    "sequenceNo": 1,
+    "description1": "For direct quotation of fewer than 40 words, integrate the quotation into your sentence. You need to provide (a) page number(s) in brackets for direct quotations.",
+    "description2": "",
+    "example": "Alibali, Phillips, and Fischer (2009) asked, \“Did the participants adopt the taught strategies?\” (p. 96).",
+    "authorNumber": 1,
+    "hasDate": 1
+  },
+  {
+    "id": 7,
+    "categoryId": 1,
+    "subCategoryId": 3,
+    "sequenceNo": 2,
+    "description1": "The author\'s name can appear inside the brackets. When quoting, you must provide a page number.",
+    "description2": "",
+    "example": "… that cause the biggest breakthroughs for individuals” (Smith, 2014, p. 96).",
+    "authorNumber": 2,
+    "hasDate": 1
+  }
+]

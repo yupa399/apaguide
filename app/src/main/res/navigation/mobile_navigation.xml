@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.apaguide.ui.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_book"
+        android:name="com.example.apaguide.ui.source.BookFragment"
+        android:label="@string/menu_book"
+        tools:layout="@layout/fragment_ref_base" />
+
+    <fragment
+        android:id="@+id/nav_webpage"
+        android:name="com.example.apaguide.ui.source.WebpageFragment"
+        android:label="@string/menu_webpage"
+        tools:layout="@layout/fragment_ref_base" />
+
+    <fragment
+        android:id="@+id/nav_magazine"
+        android:name="com.example.apaguide.ui.source.MagazineFragment"
+        android:label="@string/menu_magazine"
+        tools:layout="@layout/fragment_ref_base" />
+
+    <fragment
+        android:id="@+id/nav_journal"
+        android:name="com.example.apaguide.ui.source.JournalFragment"
+        android:label="@string/menu_journal"
+        tools:layout="@layout/fragment_ref_base" />
+
+    <fragment
+        android:id="@+id/nav_material"
+        android:name="com.example.apaguide.ui.MaterialFragment"
+        android:label="@string/menu_material"
+        tools:layout="@layout/fragment_material" />
+
+    <fragment
+        android:id="@+id/nav_faq"
+        android:name="com.example.apaguide.ui.FaqFragment"
+        android:label="@string/menu_faq"
+        tools:layout="@layout/fragment_faq" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.apaguide.ui.AboutFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about" />
+</navigation>

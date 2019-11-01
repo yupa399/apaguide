@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menu_home" />
+    </group>
+    <item android:title="APA Referencing Style">
+        <menu>
+            <group
+                android:id="@+id/nav_group_apa"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_book"
+                    android:icon="@drawable/ic_menu_book"
+                    android:title="@string/menu_book" />
+                <item
+                    android:id="@+id/nav_webpage"
+                    android:icon="@drawable/ic_menu_webpage"
+                    android:title="@string/menu_webpage" />
+                <item
+                    android:id="@+id/nav_magazine"
+                    android:icon="@drawable/ic_menu_magazine"
+                    android:title="@string/menu_magazine" />
+                <item
+                    android:id="@+id/nav_journal"
+                    android:icon="@drawable/ic_menu_journal"
+                    android:title="@string/menu_journal" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="Tools">
+        <menu>
+            <group
+                android:id="@+id/nav_group_material"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_material"
+                    android:icon="@drawable/ic_menu_material"
+                    android:title="@string/menu_material" />
+                <item
+                    android:id="@+id/nav_faq"
+                    android:icon="@drawable/ic_menu_faq"
+                    android:title="@string/menu_faq" />
+            </group>
+        </menu>
+    </item>
+    <group android:id="@+id/nav_group_about" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_menu_about"
+            android:title="@string/menu_about" />
+    </group>
+</menu>
