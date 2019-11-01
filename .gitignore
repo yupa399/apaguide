@@ -12,3 +12,9 @@
 /captures
 .externalNativeBuild
 .cxx
+.gradle
+/local.properties
+.DS_Store # only needed under mac os
+/build
+/captures
+.idea
