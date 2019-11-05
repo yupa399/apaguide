@@ -8,7 +8,7 @@
             android:icon="@drawable/ic_menu_home"
             android:title="@string/menu_home" />
     </group>
-    <item android:title="APA Referencing Style">
+    <item android:title="@string/str_title">
         <menu>
             <group
                 android:id="@+id/nav_group_apa"
