@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">APA Referencing guide</string>
+    <string name="app_name">APA Pocket Guide</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">APA Referencing Guide</string>
@@ -26,4 +26,19 @@
     <string name="btn_ok">OK</string>
     <string name="btn_cancel">Cancel</string>
     <string name="btn_apply">Apply</string>
+    <string name="str_home">Home Page</string>
+    <string name="str_splash">APA Pocket Guide</string>
+    <string name="str_settings">Guides</string>
+    <string name="str_abouts">Credits</string>
+    <string name="str_apaword">APA Referencing in Word</string>
+    <string name="str_examples">APA Examples</string>
+    <string name="str_title">APA Pocket Guide</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="journals_or_periodicals">Journals or Periodicals</string>
+    <string name="secondary_resource">Secondary Resource</string>
+    <string name="electronic_sources">Electronic Sources</string>
+    <string name="books">Books</string>
 </resources>

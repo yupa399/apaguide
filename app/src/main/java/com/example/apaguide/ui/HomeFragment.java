@@ -1,58 +1,97 @@
 package com.example.apaguide.ui;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.apaguide.R;
-import com.google.android.material.navigation.NavigationView;
+import com.github.barteksc.pdfviewer.PDFView;
+import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
+import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
+import com.github.barteksc.pdfviewer.listener.OnPageErrorListener;
+import com.shockwave.pdfium.PdfDocument;
 
-public class HomeFragment extends Fragment implements View.OnClickListener {
+import java.util.List;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
-        Button button = root.findViewById(R.id.btnBook);
-        button.setOnClickListener(this);
-        button = root.findViewById(R.id.btnWebpage);
-        button.setOnClickListener(this);
-        button = root.findViewById(R.id.btnMagazine);
-        button.setOnClickListener(this);
-        button = root.findViewById(R.id.btnJournal);
-        button.setOnClickListener(this);
-        return root;
+public class HomeFragment extends Fragment implements OnPageChangeListener, OnLoadCompleteListener,
+        OnPageErrorListener {
+
+    private static final String TAG = HomeFragment.class.getSimpleName();
+
+
+    public static final String GUIDE_FILE = "main.pdf";
+
+    PDFView pdfView;
+
+    public HomeFragment() {
+        // Required empty public constructor
+    }
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View homeView = inflater.inflate(R.layout.fragment_home, container, false);
+        pdfView = homeView.findViewById(R.id.homeView);
+        pdfView.setBackgroundColor(Color.WHITE);
+        pdfView.setEnabled(false);
+        displayFromAsset(GUIDE_FILE);
+        return homeView;
     }
 
     @Override
-    public void onClick(View v) {
-        int id = v.getId();
-        int navId = 0;
-        if(id == R.id.btnBook){       // Book
-            navId = R.id.nav_book;
-        }
-        else if(id == R.id.btnWebpage){    // Web page
-            navId = R.id.nav_webpage;
-        }
-        else if(id == R.id.btnMagazine){    // Magazine
-            navId = R.id.nav_magazine;
-        }
-        else if(id == R.id.btnJournal){    // Journal
-            navId = R.id.nav_journal;
-        }
-        if(navId == 0) return;
-        NavigationView navView = getActivity().findViewById(R.id.nav_view);
-        navView.getMenu().performIdentifierAction(navId, 0);
+    public void onPageChanged(int page, int pageCount) {
 
-//        navView.getMenu().findItem(R.id.nav_book).setChecked(false);
-//        navView.getMenu().findItem(R.id.nav_webpage).setChecked(false);
-//        navView.getMenu().findItem(R.id.nav_magazine).setChecked(false);
-//        navView.getMenu().findItem(R.id.nav_journal).setChecked(false);
-//        MenuItem mi = navView.getMenu().findItem(navId);
-//        mi.setChecked(true);
     }
+
+
+    private void displayFromAsset(String assetFileName) {
+        pdfView.fromAsset(assetFileName)
+                .defaultPage(0)
+                .onPageChange(this)
+                .enableAnnotationRendering(true)
+                .onLoad(this)
+                .scrollHandle(null)
+                .spacing(1) // in dp
+                .onPageError(this)
+                .load();
+    }
+
+    @Override
+    public void loadComplete(int nbPages) {
+        PdfDocument.Meta meta = pdfView.getDocumentMeta();
+        Log.e(TAG, "title = " + meta.getTitle());
+        Log.e(TAG, "author = " + meta.getAuthor());
+        Log.e(TAG, "subject = " + meta.getSubject());
+        Log.e(TAG, "keywords = " + meta.getKeywords());
+        Log.e(TAG, "creator = " + meta.getCreator());
+        Log.e(TAG, "producer = " + meta.getProducer());
+        Log.e(TAG, "creationDate = " + meta.getCreationDate());
+        Log.e(TAG, "modDate = " + meta.getModDate());
+
+        printBookmarksTree(pdfView.getTableOfContents(), "-");
+
+    }
+
+    public void printBookmarksTree(List<PdfDocument.Bookmark> tree, String sep) {
+        for (PdfDocument.Bookmark b : tree) {
+
+            Log.e(TAG, String.format("%s %s, p %d", sep, b.getTitle(), b.getPageIdx()));
+
+            if (b.hasChildren()) {
+                printBookmarksTree(b.getChildren(), sep + "-");
+            }
+        }
+    }
+
+    @Override
+    public void onPageError(int page, Throwable t) {
+
+    }
+
 }
