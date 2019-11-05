@@ -1,4 +1,5 @@
-package com.example.apaguide.ui;
+package com.example.apaguide.ui.contents;
+
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -6,10 +7,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import com.example.apaguide.R;
 import androidx.fragment.app.Fragment;
 
-import com.example.apaguide.R;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
 import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
@@ -18,17 +18,21 @@ import com.shockwave.pdfium.PdfDocument;
 
 import java.util.List;
 
-public class HomeFragment extends Fragment implements OnPageChangeListener, OnLoadCompleteListener,
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class APAWordFragment extends Fragment implements OnPageChangeListener, OnLoadCompleteListener,
         OnPageErrorListener {
 
-    private static final String TAG = HomeFragment.class.getSimpleName();
+    private static final String TAG = APAWordFragment.class.getSimpleName();
 
 
-    public static final String GUIDE_FILE = "main.pdf";
+    public static final String APA_WORD_FILE = "word.pdf";
 
     PDFView pdfView;
 
-    public HomeFragment() {
+    public APAWordFragment() {
         // Required empty public constructor
     }
 
@@ -36,12 +40,13 @@ public class HomeFragment extends Fragment implements OnPageChangeListener, OnLo
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View homeView = inflater.inflate(R.layout.fragment_home, container, false);
-        pdfView = homeView.findViewById(R.id.homeView);
+        // Inflate the layout for this fragment
+        View apawordView = inflater.inflate(R.layout.fragment_apaword, container, false);
+        pdfView = apawordView.findViewById(R.id.wordView);
         pdfView.setBackgroundColor(Color.WHITE);
-        pdfView.setEnabled(false);
-        displayFromAsset(GUIDE_FILE);
-        return homeView;
+//        pdfView.setEnabled(false);
+        displayFromAsset(APA_WORD_FILE);
+        return apawordView;
     }
 
     @Override
