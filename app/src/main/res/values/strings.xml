@@ -14,7 +14,7 @@
     <string name="menu_webpage">Web Page</string>
     <string name="menu_magazine">Magazine</string>
     <string name="menu_journal">Journal</string>
-    <string name="menu_material">Materials</string>
+    <string name="menu_material">Resources</string>
     <string name="menu_faq">FAQ</string>
     <string name="menu_about">About</string>
     <string name="tab_text_1">Reference List</string>
@@ -41,4 +41,10 @@
     <string name="secondary_resource">Secondary Resource</string>
     <string name="electronic_sources">Electronic Sources</string>
     <string name="books">Books</string>
+
+    <string name="link_research_skills"><a href="https://moodle.ais.ac.nz/course/view.php?id=4#sectopn-5">Research Skills</a></string>
+    <string name="link_writing_skills"><a href="https://moodle.ais.ac.nz/course/view.php?id=4#sectopn-3">Writing Skills</a></string>
+    <string name="link_apa_official"><a href="https://apastyle.apa.org/">APA Style</a></string>
+    <string name="link_apa_blog6"><a href="https://blog.apastyle.org/apastyle/apa-style-blog-6th-edition-archive.html">APA Style Blog (6th Edition)</a></string>
+    <string name="link_apa_blog7"><a href="https://apastyle.apa.org/blog">APA Style Blog (7th Edition)</a></string>
 </resources>

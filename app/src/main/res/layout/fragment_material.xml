@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:fontFamily="@font/ubuntu_bold"
-                    android:text="Materials"
+                    android:text="Resources"
                     android:textColor="@color/colorAisBlack"
                     android:textSize="24sp"
                     app:layout_constraintStart_toEndOf="@+id/imageView3"
@@ -49,68 +49,190 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/tvStudySkills"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/ubuntu_bold"
-                android:text="Study Skills Resources"
+                android:text="Study Skills (AIS Moodle)"
                 android:textColor="@color/colorAisRed"
                 android:textSize="24sp" />
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvBullet1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text=">"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvResearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/link_research_skills"
+                    android:textColorLink="@android:color/secondary_text_light"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBullet1"
+                    app:layout_constraintStart_toEndOf="@+id/tvBullet1"
+                    app:layout_constraintTop_toTopOf="@+id/tvBullet1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvBullet2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text=">"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvWriting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/link_writing_skills"
+                    android:textColorLink="@android:color/secondary_text_light"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBullet2"
+                    app:layout_constraintStart_toEndOf="@+id/tvBullet2"
+                    app:layout_constraintTop_toTopOf="@+id/tvBullet2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/tvExternalResources"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:fontFamily="@font/ubuntu_bold"
-                android:text="Writing Skills"
-                android:textColor="@color/colorAisBlack"
+                android:text="External Resources"
+                android:textColor="@color/colorAisRed"
                 android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/tvWeb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:autoLink="web"
-                android:text="https://moodle.ais.ac.nz/course/view.php?id=4#sectopn-3"
-                android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/textView10"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/ubuntu_bold"
-                android:text="Reading Skills"
-                android:textColor="@color/colorAisBlack"
-                android:textSize="24sp" />
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp">
 
-            <TextView
-                android:id="@+id/tvWeb2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:autoLink="web"
-                android:text="https://moodle.ais.ac.nz/course/view.php?id=4#sectopn-4"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/tvBullet3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text=">"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/ubuntu_bold"
-                android:text="Research Skills"
-                android:textColor="@color/colorAisBlack"
-                android:textSize="24sp" />
+                <TextView
+                    android:id="@+id/tvApaOfficial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/link_apa_official"
+                    android:textColorLink="@android:color/secondary_text_light"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBullet3"
+                    app:layout_constraintStart_toEndOf="@+id/tvBullet3"
+                    app:layout_constraintTop_toTopOf="@+id/tvBullet3" />
 
-            <TextView
-                android:id="@+id/tvWeb3"
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:text="Official website"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvApaOfficial"
+                    app:layout_constraintStart_toEndOf="@+id/tvApaOfficial"
+                    app:layout_constraintTop_toTopOf="@+id/tvApaOfficial" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:autoLink="web"
-                android:text="https://moodle.ais.ac.nz/course/view.php?id=4#sectopn-5"
-                android:textSize="18sp" />
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvBullet4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text=">"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvApaBlog6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/link_apa_blog6"
+                    android:textColorLink="@android:color/secondary_text_light"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBullet4"
+                    app:layout_constraintStart_toEndOf="@+id/tvBullet4"
+                    app:layout_constraintTop_toTopOf="@+id/tvBullet4" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvBullet5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text=">"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvApaBlog7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/link_apa_blog7"
+                    android:textColorLink="@android:color/secondary_text_light"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBullet5"
+                    app:layout_constraintStart_toEndOf="@+id/tvBullet5"
+                    app:layout_constraintTop_toTopOf="@+id/tvBullet5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
     </ScrollView>
