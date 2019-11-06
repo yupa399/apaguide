@@ -14,19 +14,19 @@
     <fragment
         android:id="@+id/nav_guide"
         android:name="com.example.apaguide.ui.contents.GuideFragment"
-        android:label="@string/menu_book"
+        android:label="@string/str_guide"
         tools:layout="@layout/fragment_ref_base" />
 
     <fragment
         android:id="@+id/nav_examples"
         android:name="com.example.apaguide.ui.contents.APARExamplesFragment"
-        android:label="@string/menu_webpage"
+        android:label="@string/str_examples"
         tools:layout="@layout/fragment_ref_base" />
 
     <fragment
         android:id="@+id/nav_word"
         android:name="com.example.apaguide.ui.contents.APAWordFragment"
-        android:label="@string/menu_magazine"
+        android:label="@string/str_apaword"
         tools:layout="@layout/fragment_ref_base" />
 
 
