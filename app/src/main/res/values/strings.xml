@@ -47,4 +47,21 @@
     <string name="link_apa_official"><a href="https://apastyle.apa.org/">APA Style</a></string>
     <string name="link_apa_blog6"><a href="https://blog.apastyle.org/apastyle/apa-style-blog-6th-edition-archive.html">APA Style Blog (6th Edition)</a></string>
     <string name="link_apa_blog7"><a href="https://apastyle.apa.org/blog">APA Style Blog (7th Edition)</a></string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">APA</string>
+    <string name="slide_1_desc">A pocket guide about APA referencing</string>
+
+    <string name="slide_2_title">Correct referencing style</string>
+    <string name="slide_2_desc">Know Citation about Book, Journals, Website and so on </string>
+
+    <string name="slide_3_title">Plagiarism</string>
+    <string name="slide_3_desc">know what it is and how to avoid it</string>
+
+    <string name="slide_4_title">FAQ</string>
+    <string name="slide_4_desc">See Frequent asked questions and more</string>
 </resources>
