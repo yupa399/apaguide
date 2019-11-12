@@ -37,7 +37,6 @@ public class GuideFragment extends Fragment implements OnPageChangeListener, OnL
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        //AIS brand guidelines lo-res.pdf
         View guideView = inflater.inflate(R.layout.fragment_guides, container, false);
         pdfView = guideView.findViewById(R.id.guideView);
         pdfView.setBackgroundColor(Color.WHITE);

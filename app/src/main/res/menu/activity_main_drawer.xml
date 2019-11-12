@@ -14,9 +14,19 @@
                 android:id="@+id/nav_group_apa"
                 android:checkableBehavior="single">
                 <item
+                    android:id="@+id/nav_apa_important"
+                    android:icon="@drawable/ic_menu_webpage"
+                    android:title="@string/str_apa_important" />
+
+                <item
+                    android:id="@+id/nav_avoid_plagiarism"
+                    android:icon="@drawable/ic_menu_journal"
+                    android:title="@string/str_avoid_plagiarism" />
+                <item
                     android:id="@+id/nav_guide"
                     android:icon="@drawable/ic_menu_book"
                     android:title="@string/str_guide" />
+
                 <item
                     android:id="@+id/nav_examples"
                     android:icon="@drawable/ic_menu_webpage"
@@ -25,6 +35,7 @@
                     android:id="@+id/nav_word"
                     android:icon="@drawable/ic_menu_magazine"
                     android:title="@string/str_apaword" />
+
             </group>
         </menu>
     </item>
@@ -44,9 +55,9 @@
             </group>
         </menu>
     </item>
-    <group android:id="@+id/nav_group_credit" android:checkableBehavior="single">
+    <group  android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_about"
+            android:id="@+id/nav_group_credit"
             android:icon="@drawable/ic_menu_about"
             android:title="@string/str_credit" />
     </group>

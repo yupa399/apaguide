@@ -62,7 +62,7 @@ public class APARExamplesFragment extends Fragment implements OnPageChangeListen
                 resetButton();
                 displayFromAsset(BOOKS_FILE);
                 btnBooks.setEnabled(false);
-                btnBooks.setTextColor(Color.BLUE);
+                btnBooks.setTextColor(Color.RED);
             }
         });
         btnESource = examplesView.findViewById(R.id.btnESource);
@@ -72,7 +72,7 @@ public class APARExamplesFragment extends Fragment implements OnPageChangeListen
                 resetButton();
                 displayFromAsset(ESOURCE_FILE);
                 btnESource.setEnabled(false);
-                btnESource.setTextColor(Color.BLUE);
+                btnESource.setTextColor(Color.RED);
             }
         });
 
@@ -83,7 +83,7 @@ public class APARExamplesFragment extends Fragment implements OnPageChangeListen
                 resetButton();
                 displayFromAsset(JOP_FILE);
                 btnJOP.setEnabled(false);
-                btnJOP.setTextColor(Color.BLUE);
+                btnJOP.setTextColor(Color.RED);
             }
         });
         btnSResource = examplesView.findViewById(R.id.btnSResource);
@@ -93,7 +93,7 @@ public class APARExamplesFragment extends Fragment implements OnPageChangeListen
                 resetButton();
                 displayFromAsset(SRESOURCE_FILE);
                 btnSResource.setEnabled(false);
-                btnSResource.setTextColor(Color.BLUE);
+                btnSResource.setTextColor(Color.RED);
             }
         });
         return examplesView;

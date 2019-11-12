@@ -12,22 +12,34 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/nav_avoid_plagiarism"
+        android:name="com.example.apaguide.ui.contents.AvoidPlagiarismFragment"
+        android:label="@string/str_avoid_plagiarism"
+        tools:layout="@layout/fragment_aovid_plagiarism" />
+
+    <fragment
+        android:id="@+id/nav_apa_important"
+        android:name="com.example.apaguide.ui.contents.APAImportantFragment"
+        android:label="@string/str_apa_important"
+        tools:layout="@layout/fragment_apa_important" />
+
+    <fragment
         android:id="@+id/nav_guide"
         android:name="com.example.apaguide.ui.contents.GuideFragment"
         android:label="@string/str_guide"
-        tools:layout="@layout/fragment_ref_base" />
+        tools:layout="@layout/fragment_guides" />
 
     <fragment
         android:id="@+id/nav_examples"
         android:name="com.example.apaguide.ui.contents.APARExamplesFragment"
         android:label="@string/str_examples"
-        tools:layout="@layout/fragment_ref_base" />
+        tools:layout="@layout/fragment_aparexamples" />
 
     <fragment
         android:id="@+id/nav_word"
         android:name="com.example.apaguide.ui.contents.APAWordFragment"
         android:label="@string/str_apaword"
-        tools:layout="@layout/fragment_ref_base" />
+        tools:layout="@layout/fragment_apaword" />
 
 
     <fragment
@@ -38,13 +50,13 @@
 
     <fragment
         android:id="@+id/nav_faq"
-        android:name="com.example.apaguide.ui.FaqFragment"
+        android:name="com.example.apaguide.ui.contents.APAFAQFragment"
         android:label="@string/menu_faq"
-        tools:layout="@layout/fragment_faq" />
+        tools:layout="@layout/fragment_apafaq" />
 
     <fragment
-        android:id="@+id/nav_about"
-        android:name="com.example.apaguide.ui.AboutFragment"
-        android:label="@string/menu_about"
-        tools:layout="@layout/fragment_about" />
+        android:id="@+id/nav_group_credit"
+        android:name="com.example.apaguide.ui.contents.CreditFragment"
+        android:label="@string/str_credit"
+        tools:layout="@layout/fragment_credit" />
 </navigation>
