@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".welcome" />
+        <activity android:name=".WelcomeActivity" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SlashTheme">

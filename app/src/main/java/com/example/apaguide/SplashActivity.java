@@ -1,10 +1,8 @@
 package com.example.apaguide;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this, welcome.class));
+                startActivity(new Intent(SplashActivity.this, WelcomeActivity.class));
                 finish();
             }
         }, 2500);

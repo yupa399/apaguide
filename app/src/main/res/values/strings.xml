@@ -2,7 +2,7 @@
     <string name="app_name">APA Pocket Guide</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">APA Referencing Guide</string>
+    <string name="nav_header_title">APA Referencing Guidelines</string>
     <string name="nav_header_subtitle"></string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
@@ -32,10 +32,10 @@
     <string name="str_guide">Guides</string>
     <string name="str_credit">Credits</string>
     <string name="str_apaword">APA Referencing in Word</string>
-    <string name="str_examples">APA Examples</string>
+    <string name="str_examples">APA Guidelines for Sources</string>
     <string name="str_title">APA Pocket Guide</string>
-    <string name="str_apa_important">APA Important</string>
-    <string name="str_avoid_plagiarism">Avoid Plagiarism</string>
+    <string name="str_apa_important">Importance of Referencing</string>
+    <string name="str_avoid_plagiarism">Avoiding Plagiarism</string>
     <string name="str_faq">FAQ</string>
 
     <string name="title_activity_splash">SplashActivity</string>

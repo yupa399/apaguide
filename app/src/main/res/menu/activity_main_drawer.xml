@@ -8,7 +8,7 @@
             android:icon="@drawable/ic_menu_home"
             android:title="@string/menu_home" />
     </group>
-    <item android:title="@string/str_title">
+    <item android:title="Index">
         <menu>
             <group
                 android:id="@+id/nav_group_apa"
@@ -22,10 +22,6 @@
                     android:id="@+id/nav_avoid_plagiarism"
                     android:icon="@drawable/ic_menu_journal"
                     android:title="@string/str_avoid_plagiarism" />
-                <item
-                    android:id="@+id/nav_guide"
-                    android:icon="@drawable/ic_menu_book"
-                    android:title="@string/str_guide" />
 
                 <item
                     android:id="@+id/nav_examples"

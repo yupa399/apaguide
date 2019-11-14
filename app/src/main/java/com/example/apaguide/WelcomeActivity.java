@@ -4,7 +4,6 @@ package com.example.apaguide;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 
 import android.text.Html;
@@ -23,7 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager.widget.PagerAdapter;
 
-public class welcome extends AppCompatActivity {
+public class WelcomeActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
@@ -55,7 +54,7 @@ public class welcome extends AppCompatActivity {
         btnNext = findViewById(R.id.btn_next);
 
 
-        // layouts of all welcome sliders
+        // layouts of all WelcomeActivity sliders
         // add few more layouts if you want
         layouts = new int[]{
                 R.layout.welcome_slice1,
@@ -121,7 +120,7 @@ public class welcome extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(welcome.this, MainActivity.class));
+        startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
         finish();
     }
 
