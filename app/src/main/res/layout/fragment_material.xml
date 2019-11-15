@@ -31,6 +31,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:contentDescription="@string/menu_material"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_head_material" />
@@ -41,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:fontFamily="@font/ubuntu_bold"
-                    android:text="Resources"
+                    android:text="@string/menu_material"
                     android:textColor="@color/colorAisBlack"
                     android:textSize="24sp"
                     app:layout_constraintStart_toEndOf="@+id/imageView3"
@@ -54,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/ubuntu_bold"
-                android:text="Study Skills (AIS Moodle)"
+                android:text="@string/resources_study_skills"
                 android:textColor="@color/colorAisRed"
                 android:textSize="24sp" />
 
@@ -69,23 +70,25 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:fontFamily="@font/ubuntu_bold"
-                    android:text=">"
+                    android:text="@string/bullet_link"
                     android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/tvResearch"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:fontFamily="@font/ubuntu_bold"
                     android:text="@string/link_research_skills"
                     android:textColorLink="@android:color/secondary_text_light"
                     android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/tvBullet1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tvBullet1"
-                    app:layout_constraintTop_toTopOf="@+id/tvBullet1" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -100,23 +103,172 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:fontFamily="@font/ubuntu_bold"
-                    android:text=">"
+                    android:text="@string/bullet_link"
                     android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/tvWriting"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:fontFamily="@font/ubuntu_bold"
                     android:text="@string/link_writing_skills"
                     android:textColorLink="@android:color/secondary_text_light"
                     android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/tvBullet2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tvBullet2"
-                    app:layout_constraintTop_toTopOf="@+id/tvBullet2" />
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvVideoResources"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="@string/resources_video_resources"
+                android:textColor="@color/colorAisRed"
+                android:textSize="24sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvBullet101"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/bullet_link"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvVideo1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/link_video1"
+                    android:textColor="@android:color/black"
+                    android:textColorLink="@android:color/secondary_text_light"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvBullet101"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvBullet102"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/bullet_link"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvVideo2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/link_video2"
+                    android:textColor="@android:color/black"
+                    android:textColorLink="@android:color/secondary_text_light"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvBullet102"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvBullet103"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/bullet_link"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvVideo3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/link_video3"
+                    android:textColor="@android:color/black"
+                    android:textColorLink="@android:color/secondary_text_light"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvBullet103"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvBullet104"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/bullet_link"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvVideo4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/link_video4"
+                    android:textColor="@android:color/black"
+                    android:textColorLink="@android:color/secondary_text_light"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvBullet104"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -127,7 +279,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/ubuntu_bold"
-                android:text="External Resources"
+                android:text="@string/resources_external_rewources"
                 android:textColor="@color/colorAisRed"
                 android:textSize="24sp" />
 
@@ -143,8 +295,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:fontFamily="@font/ubuntu_bold"
-                    android:text=">"
+                    android:text="@string/bullet_link"
                     android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -157,21 +310,22 @@
                     android:text="@string/link_apa_official"
                     android:textColorLink="@android:color/secondary_text_light"
                     android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/tvBullet3"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tvBullet3"
-                    app:layout_constraintTop_toTopOf="@+id/tvBullet3" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:fontFamily="@font/ubuntu_light"
-                    android:text="Official website"
+                    android:text="@string/link_official_website"
                     android:textColor="@android:color/black"
-                    app:layout_constraintBottom_toBottomOf="@+id/tvApaOfficial"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tvApaOfficial"
-                    app:layout_constraintTop_toTopOf="@+id/tvApaOfficial" />
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -185,23 +339,25 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:fontFamily="@font/ubuntu_bold"
-                    android:text=">"
+                    android:text="@string/bullet_link"
                     android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/tvApaBlog6"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:fontFamily="@font/ubuntu_bold"
                     android:text="@string/link_apa_blog6"
                     android:textColorLink="@android:color/secondary_text_light"
                     android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/tvBullet4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tvBullet4"
-                    app:layout_constraintTop_toTopOf="@+id/tvBullet4" />
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -215,23 +371,25 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:fontFamily="@font/ubuntu_bold"
-                    android:text=">"
+                    android:text="@string/bullet_link"
                     android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/tvApaBlog7"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:fontFamily="@font/ubuntu_bold"
                     android:text="@string/link_apa_blog7"
                     android:textColorLink="@android:color/secondary_text_light"
                     android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/tvBullet5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tvBullet5"
-                    app:layout_constraintTop_toTopOf="@+id/tvBullet5" />
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
