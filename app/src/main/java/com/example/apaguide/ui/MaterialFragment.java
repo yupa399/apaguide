@@ -1,5 +1,9 @@
 package com.example.apaguide.ui;
 
+import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Paint;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
@@ -12,11 +16,26 @@ import androidx.fragment.app.Fragment;
 
 import com.example.apaguide.R;
 
-public class MaterialFragment extends Fragment {
+import java.util.HashMap;
+import java.util.Map;
+
+public class MaterialFragment extends Fragment implements View.OnClickListener {
+    private Map<Integer, String> mapVideoId;    // YouTube video ID for Video Resources
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_material, container, false);
-        TextView tv = root.findViewById(R.id.tvResearch);
+
+        mapVideoId = new HashMap<Integer, String>() {{
+            Resources r = getResources();
+            put(R.id.tvVideo1, r.getString(R.string.video_id_1));
+            put(R.id.tvVideo2, r.getString(R.string.video_id_2));
+            put(R.id.tvVideo3, r.getString(R.string.video_id_3));
+            put(R.id.tvVideo4, r.getString(R.string.video_id_4));
+        }};
+
+        TextView tv;
+        tv = root.findViewById(R.id.tvResearch);
         tv.setMovementMethod(LinkMovementMethod.getInstance());
         tv = root.findViewById(R.id.tvWriting);
         tv.setMovementMethod(LinkMovementMethod.getInstance());
@@ -26,6 +45,22 @@ public class MaterialFragment extends Fragment {
         tv.setMovementMethod(LinkMovementMethod.getInstance());
         tv = root.findViewById(R.id.tvApaBlog7);
         tv.setMovementMethod(LinkMovementMethod.getInstance());
+
+        // Set ClickListener on Video links
+        for(Map.Entry<Integer, String> e : mapVideoId.entrySet()){
+            tv = root.findViewById(e.getKey());
+            tv.setOnClickListener(this);
+            tv.setPaintFlags(tv.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        }
         return root;
+    }
+
+    @Override
+    public void onClick(View v) {
+        String videoId = mapVideoId.get(v.getId()); // Get YouTube video ID
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("vnd.youtube:" + videoId));
+        intent.putExtra("VIDEO_ID", videoId);
+        startActivity(intent);  // Start YouTube Intent
     }
 }

@@ -51,6 +51,19 @@
     <string name="link_apa_official"><a href="https://apastyle.apa.org/">APA Style</a></string>
     <string name="link_apa_blog6"><a href="https://blog.apastyle.org/apastyle/apa-style-blog-6th-edition-archive.html">APA Style Blog (6th Edition)</a></string>
     <string name="link_apa_blog7"><a href="https://apastyle.apa.org/blog">APA Style Blog (7th Edition)</a></string>
+    <string name="resources_study_skills">Study Skills (AIS Moodle)</string>
+    <string name="resources_video_resources">Video Resources (YouTube)</string>
+    <string name="resources_external_rewources">External Resources</string>
+    <string name="bullet_link"><![CDATA[>]]></string>
+    <string name="link_official_website">Official website</string>
+    <string name="link_video1">Quotes, paraphrases &amp; summaries</string>
+    <string name="link_video2">Paraphrasing and Avoiding Plagiarism</string>
+    <string name="link_video3">The Art of Paraphrasing: Avoiding Plagiarism</string>
+    <string name="link_video4">Paraphrasing Techniques</string>
+    <string name="video_id_1">Ral3ldBxQxA</string>
+    <string name="video_id_2">NMzoxRw6llU</string>
+    <string name="video_id_3">H1qo10dG5Gw</string>
+    <string name="video_id_4">7syE6AMRA7k</string>
 
     <string name="title_activity_welcome">Home Screen</string>
     <string name="next">NEXT</string>
