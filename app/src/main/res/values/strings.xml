@@ -45,6 +45,7 @@
     <string name="secondary_resource">Secondary Resource</string>
     <string name="electronic_sources">Electronic Sources</string>
     <string name="books">Books</string>
+    <string name="guide">Guide</string>
 
     <string name="link_research_skills"><a href="https://moodle.ais.ac.nz/course/view.php?id=4#sectopn-5">Research Skills</a></string>
     <string name="link_writing_skills"><a href="https://moodle.ais.ac.nz/course/view.php?id=4#sectopn-3">Writing Skills</a></string>

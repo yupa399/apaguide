@@ -17,6 +17,7 @@ import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
 import com.github.barteksc.pdfviewer.listener.OnPageErrorListener;
 import com.shockwave.pdfium.PdfDocument;
 import com.example.apaguide.R;
+
 import java.util.List;
 
 
@@ -34,6 +35,8 @@ public class APARExamplesFragment extends Fragment implements OnPageChangeListen
     private static final String SRESOURCE_FILE = "SResource.pdf";
     private static final String BOOKS_FILE = "books.pdf";
     private static final String JOP_FILE = "jouornalsOrperiodies.pdf";
+    private static final String GUIDES_FILE = "guide.pdf";
+
 
     PDFView pdfView;
 
@@ -41,6 +44,7 @@ public class APARExamplesFragment extends Fragment implements OnPageChangeListen
     private Button btnSResource;
     private Button btnBooks;
     private Button btnJOP;
+    private Button btnGuides;
 
     public APARExamplesFragment() {
         // Required empty public constructor
@@ -54,17 +58,8 @@ public class APARExamplesFragment extends Fragment implements OnPageChangeListen
         View examplesView = inflater.inflate(R.layout.fragment_aparexamples, container, false);
         pdfView = examplesView.findViewById(R.id.examplesView);
         pdfView.setBackgroundColor(Color.WHITE);
-        displayFromAsset(ESOURCE_FILE);
-        btnBooks = examplesView.findViewById(R.id.btnBooks);
-        btnBooks.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                resetButton();
-                displayFromAsset(BOOKS_FILE);
-                btnBooks.setEnabled(false);
-                btnBooks.setTextColor(Color.RED);
-            }
-        });
+
+
         btnESource = examplesView.findViewById(R.id.btnESource);
         btnESource.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +68,19 @@ public class APARExamplesFragment extends Fragment implements OnPageChangeListen
                 displayFromAsset(ESOURCE_FILE);
                 btnESource.setEnabled(false);
                 btnESource.setTextColor(Color.RED);
+            }
+        });
+        displayFromAsset(ESOURCE_FILE);
+        btnESource.setTextColor(Color.RED);
+
+        btnBooks = examplesView.findViewById(R.id.btnBooks);
+        btnBooks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                resetButton();
+                displayFromAsset(BOOKS_FILE);
+                btnBooks.setEnabled(false);
+                btnBooks.setTextColor(Color.RED);
             }
         });
 
@@ -96,11 +104,22 @@ public class APARExamplesFragment extends Fragment implements OnPageChangeListen
                 btnSResource.setTextColor(Color.RED);
             }
         });
+        btnGuides = examplesView.findViewById(R.id.btnGuides);
+        btnGuides.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                resetButton();
+                displayFromAsset(GUIDES_FILE);
+                btnGuides.setEnabled(false);
+                btnGuides.setTextColor(Color.RED);
+            }
+        });
         return examplesView;
     }
 
-    private void resetButton(){
+    private void resetButton() {
         btnESource.setTextColor(Color.BLACK);
+        btnGuides.setTextColor(Color.BLACK);
         btnSResource.setTextColor(Color.BLACK);
         btnBooks.setTextColor(Color.BLACK);
         btnJOP.setTextColor(Color.BLACK);
@@ -108,6 +127,7 @@ public class APARExamplesFragment extends Fragment implements OnPageChangeListen
         btnSResource.setEnabled(true);
         btnBooks.setEnabled(true);
         btnJOP.setEnabled(true);
+        btnGuides.setEnabled(true);
     }
 
     private void displayFromAsset(String assetFileName) {
