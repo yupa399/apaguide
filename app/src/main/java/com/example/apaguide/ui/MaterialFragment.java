@@ -1,5 +1,6 @@
 package com.example.apaguide.ui;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Paint;
@@ -58,9 +59,16 @@ public class MaterialFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         String videoId = mapVideoId.get(v.getId()); // Get YouTube video ID
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse("vnd.youtube:" + videoId));
-        intent.putExtra("VIDEO_ID", videoId);
-        startActivity(intent);  // Start YouTube Intent
+        Intent appIntent = new Intent(Intent.ACTION_VIEW);
+        appIntent.setData(Uri.parse("vnd.youtube://" + videoId));
+        appIntent.putExtra("VIDEO_ID", videoId);
+        Intent webIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("http://www.youtube.com/watch?v=" + videoId));
+        try {
+            startActivity(appIntent);
+        } catch (ActivityNotFoundException ex) {
+            startActivity(webIntent);
+        }
+        startActivity(webIntent);  // Start YouTube Intent
     }
 }
