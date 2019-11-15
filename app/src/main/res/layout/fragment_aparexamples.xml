@@ -32,6 +32,7 @@
             android:fontFamily="@font/ubuntu_medium"
             android:text="@string/secondary_resource"
             android:textAlignment="center"
+            android:textAllCaps="false"
             android:textSize="12sp" />
 
     </LinearLayout>
@@ -54,6 +55,7 @@
             android:fontFamily="@font/ubuntu_medium"
             android:text="@string/books"
             android:textAlignment="center"
+            android:textAllCaps="false"
             android:textSize="12sp" />
 
         <Button
@@ -65,6 +67,7 @@
             android:fontFamily="@font/ubuntu_medium"
             android:text="@string/journals_or_periodicals"
             android:textAlignment="center"
+            android:textAllCaps="false"
             android:textSize="12sp" />
 
     </LinearLayout>
