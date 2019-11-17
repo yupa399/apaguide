@@ -60,7 +60,7 @@ public class MaterialFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         String videoId = mapVideoId.get(v.getId()); // Get YouTube video ID
         Intent appIntent = new Intent(Intent.ACTION_VIEW);
-        appIntent.setData(Uri.parse("vnd.youtube://" + videoId));
+        appIntent.setData(Uri.parse("vnd.youtube:" + videoId));
         appIntent.putExtra("VIDEO_ID", videoId);
         Intent webIntent = new Intent(Intent.ACTION_VIEW,
                 Uri.parse("http://www.youtube.com/watch?v=" + videoId));
