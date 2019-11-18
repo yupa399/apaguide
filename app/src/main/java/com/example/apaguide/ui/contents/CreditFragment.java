@@ -41,7 +41,7 @@ public class CreditFragment extends Fragment implements OnPageChangeListener, On
         View creditView = inflater.inflate(R.layout.fragment_credit, container, false);
         pdfView = creditView.findViewById(R.id.creditView);
         pdfView.setBackgroundColor(Color.WHITE);
-        pdfView.setEnabled(false);
+//        pdfView.setEnabled(false);
         displayFromAsset(CREDIT_FILE);
         return creditView;
     }

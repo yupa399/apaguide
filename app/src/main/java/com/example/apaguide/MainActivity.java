@@ -1,34 +1,19 @@
 package com.example.apaguide;
 
-import android.content.Context;
 import android.os.Bundle;
-
-import com.example.apaguide.model.Example;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import android.util.DisplayMetrics;
-import android.view.View;
+import android.view.WindowManager;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.customview.widget.ViewDragHelper;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
-
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.view.Menu;
-import android.view.WindowManager;
-
-import java.io.IOException;
-
-import io.realm.Realm;
 
 public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
@@ -40,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        setLeftMargin(drawer,0.45f);
+        setLeftMargin(drawer, 0.30f);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -57,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * extend slide area
+     *
      * @param drawer
      * @param percent
      */
